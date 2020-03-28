@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "EmployeeService";
+
+package employees;
+
+service Employees {
+  rpc GetEmployee (EmployeeId) returns (EmployeeInfo);
+}
+
+message EmployeeInfo {
+  int32 Id = 1;
+  string Name = 2;
+  string Address = 3;
+  int32 Age = 4;
+  }
+  
+  message EmployeeId{
+  int32 Id = 1;
+}
+

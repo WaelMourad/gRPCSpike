@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "LookupsService";
+
+package lookupsSVC;
+
+service lookupsSVC {
+  rpc GetLookup (LookupRequest) returns (LookupResponse);
+}
+
+message LookupRequest{
+    int32 id = 2;
+}
+
+message LookupResponse {
+  int32 Id = 1;
+  string Name = 2;
+  int32 Age = 3;
+  string Address = 4;
+}
